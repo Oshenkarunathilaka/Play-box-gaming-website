@@ -1,0 +1,420 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #e056fd;
+    --black: #090029;
+    --bg-color: #14074B;
+    --white: #fff;
+    --light-white: rgba(255,255,255,.8);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    --border: .2rem solid rgba(255,255,255,.1);
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 50.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--black);
+}
+
+/* Sections */
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--main-color);
+    border-radius: .5rem;
+    border: .2rem solid var(--main-color);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: none;
+    transition: .2s linear;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover {
+    color: var(--white);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    
+}
+
+.header .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .flex .logo {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* site logo */
+.logo-image {
+    width: 150px; 
+    height: auto;
+}
+
+.header .flex .logo i {
+    margin-right: .5rem;
+    color: var(--white);
+}
+
+.header .flex .navbar a {
+    margin: 0 1.5rem;
+    font-size: 2.0rem;
+    color: var(--light-white);
+}
+
+.header .flex .navbar a:hover {
+    color: var(--main-color);
+}
+
+/* background image */
+.bgimage {
+    height:1000px; 
+  margin: 0;
+  background-image: 
+    linear-gradient(rgba(20, 7, 75, 0.3), rgba(20, 7, 75, 1)),
+    url('../images/newspage1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+}
+
+
+.about-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(243, 180, 8);
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* News Section Styles */
+.news-section {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    text-align: center;
+    margin-top: 45rem;
+}
+
+.news-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+
+.news-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.news-item {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.news-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--light-white);
+}
+
+/* Read More Button Styles */
+.read-more {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--main-color);
+    border-radius: .5rem;
+    border: .2rem solid var(--main-color);
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    background: none;
+    transition: .3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    color: var(--white);
+    background-color: var(--main-color);
+    transition: .3s ease;
+}
+
+
+/* Footer Section */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #14074B;
+    color: #ffffff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Left Section - Logo and Social Icons */
+  .footer-logo {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 5px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #4C2FBF;
+  }
+  
+  /* Middle Section - Contact Form */
+  .footer-middle h3 {
+    margin-bottom: 10px;
+    font-size: 16px; 
+  }
+  
+  .footer-middle form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-middle input, .footer-middle textarea, .footer-middle button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  .footer-middle button {
+    background-color: #4C2FBF;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  
+  .footer-right h3 {
+    margin-bottom: 20px;
+    font-size: 16px; 
+    
+  }
+  
+  .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px; 
+    
+  }
+  
+  .footer-right ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-right ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-right ul li a:hover {
+    text-decoration: underline;
+  }
+  .footer-name{
+    font-size: 11px;
+  }
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+
+    .logo-image {
+        width: 100px;
+    }
+
+    /* Adjust navigation for mobile */
+    .header .flex .navbar a {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* Reduce padding in sections */
+    section {
+        padding: 2rem 1rem;
+    }
+
+    /*  news section  */
+    .news-section {
+        padding: 2rem 1rem;
+    }
+
+    .news-item {
+        width: 90%; 
+    }
+
+    .news-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .news-content p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .logo-image {
+        width: 80px;
+    }
+
+    .header .flex .navbar a {
+        font-size: 1.4rem;
+        margin: 0 0.5rem;
+    }
+
+    /* Reduce button size */
+    .btn {
+        font-size: 1.6rem;
+        padding: 0.8rem 2rem;
+    }
+
+    
+    .news-container {
+        flex-direction: column; 
+    }
+
+    .news-item {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .news-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .news-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Default link styling */
+.navbar a {
+    font-weight: normal;
+    color: var(--light-white);
+}
+
+/* Highlight the active link based on the body class */
+.home-page .navbar a[href="index.html"],
+.about-page .navbar a[href="aboutus.html"],
+.store-page .navbar a[href="store.html"],
+.news-page .navbar a[href="news.html"],
+.streams-page .navbar a[href="stream.html"] {
+    font-weight: bold;
+    color: var(--white);
+}

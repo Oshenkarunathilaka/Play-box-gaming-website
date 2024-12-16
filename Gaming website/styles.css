@@ -1,0 +1,405 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --main-color:#e056fd;
+    --black:#090029;
+    --bg-color:#14074B;
+    --white:#fff;
+    --light-white:rgba(255,255,255,.8);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.3);
+    --border:.2rem solid rgba(255,255,255,.1);
+
+    
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform:capitalize ;
+}
+html{
+    font-size: 50.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 1rem;
+
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+
+}
+::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
+body{
+    background: var(--black);
+}
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    color:var(--main-color);
+    border-radius: .5rem;
+    border: .2rem solid var(--main-color);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: none;
+    transition: .2s linear;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    height: 100%;
+    width: 0;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .2s linear;
+
+}
+
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover{
+    color: var(--white);
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+}
+.header .flex{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .flex .logo{
+    font-size: 2rem;
+    color: var(--white);
+}
+.header .flex .logo i{
+    margin-right: .5rem;
+    color: var(--white);
+}
+.header .flex .navbar a{
+ margin: 0 1.5rem;
+ font-size: 2.0rem;
+ color: var(--light-white);
+}
+.header .flex .navbar a:hover{
+    color:var(--main-color);
+}
+/* site logo */
+.logo-image {
+    width: 150px; 
+    height: auto;
+}
+
+
+ .home .flex{ 
+     display: flex; 
+     
+     align-items: center; 
+    gap: 2rem;
+     min-height: 100vh;  
+     flex-wrap: wrap; 
+ } 
+
+.home .flex .image{
+flex: 1 1 40rem;
+}
+
+
+.home .flex .img{
+    width: 100%;
+    }
+
+
+
+.home .flex .content{
+    flex: 1 1 40rem;
+}
+.home .flex .content h3{
+    font-size: 6rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.home .flex .content h3 span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home .flex .content p{
+    font-size: 1.6rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+    line-height: 1.8rem;
+
+}
+
+/* background video */
+.home {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    
+    
+    
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home .flex {
+    
+    z-index: 1;
+}
+
+
+
+
+
+
+/* Popup window */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    color: #14074B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Heading and Text */
+.popup-content h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+}
+.popup-buttons .btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: #ffffff;
+    background-color: #14074B;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* navigation bar color change */
+
+.navbar a {
+    font-weight: normal;
+    color: var(--light-white);
+}
+
+/* Highlight the active link based on the body class */
+.home-page .navbar a[href="index.html"],
+.about-page .navbar a[href="aboutus.html"],
+.store-page .navbar a[href="store.html"],
+.news-page .navbar a[href="news.html"],
+.streams-page .navbar a[href="stream.html"] {
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    /* for smaller screens */
+    html {
+        font-size: 45%;
+    }
+    
+    .header .flex {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .navbar a {
+        font-size: 1.6rem;
+    }
+
+    /* Logo adjustments */
+    .logo-image {
+        width: 120px; 
+    }
+
+    /* Home section adjustments */
+    .home .flex {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    
+    .home .flex .content h3 {
+        font-size: 4rem; 
+    }
+
+    .home .flex .content p {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .home .flex .content .btn {
+        font-size: 1.6rem;
+        padding: 0.8rem 2rem;
+    }
+
+    /* Video adjustments */
+    .background-video {
+        height: auto;
+    }
+
+    /* Download section adjustments */
+    .download-section {
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .download-section .btn {
+        font-size: 1.6rem;
+        padding: 0.8rem 3rem;
+    }
+
+    /* Start stream section adjustments */
+    .start-stream {
+        padding: 3rem 1rem;
+    }
+    
+    .start-stream h1 {
+        font-size: 3rem;
+    }
+
+    .start-stream p {
+        font-size: 1.6rem;
+    }
+
+    /* Popup window adjustments */
+    .popup-content {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .popup-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .popup-content p {
+        font-size: 1.4rem;
+    }
+
+    /* Popup buttons */
+    .popup-buttons .btn {
+        padding: 6px 12px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra small devices (less than 576px) */
+@media (max-width: 576px) {
+    
+    .header .flex {
+        padding: 1rem;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
+    .home .flex .content h3 {
+        font-size: 3.2rem;
+    }
+
+    .home .flex .content p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .download-section .btn,
+    .start-stream .btn {
+        font-size: 1.4rem;
+        padding: 0.6rem 2rem;
+    }
+    
+    /* Adjust popup width */
+    .popup-content {
+        width: 90%;
+        padding: 1rem;
+    }
+}

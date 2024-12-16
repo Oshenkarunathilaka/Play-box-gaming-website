@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Box</title>
+    
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <header class="header">
+        <section class="flex">
+            <a href="" class="logo">
+                <img src="images/logo1.png" alt="Logo" class="logo-image">
+            </a>
+            
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="aboutus.html">About</a>
+                <a href="store.html">Store</a>
+                <a href="news.html">News</a>
+                <a href="stream.html">Streams</a>
+            </nav>
+            <a href="loginpage.html" class="btn">Sign Up</a>
+        </section>
+
+<!-- home section -->
+
+
+<div class="home" id="home">
+    <section class="flex">
+
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="videos/homepage1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+
+
+        <div class="content">
+            <h3><span>UNLIMITED</span> Games Heaven</h3>
+            <p>Explore a vast collection of thrilling games for all skill levels. From the latest releases to classic favorites, there’s something for everyone. Get ready for endless fun—click Play Now to start your adventure!
+
+            </p>
+            <a href="#" class="btn">Play Now</a>
+        </div>
+        <div class="image">
+        
+              
+        </div>
+
+
+    </section>
+</div>
+
+</header>
+<!-- Popup window -->
+<div id="login-popup" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Login Required</h2>
+        <p>Before playing games, you need to log in to Play Box.</p>
+        <div class="popup-buttons">
+            <a href="loginpage.html" class="btn">Login Now</a>
+            <button onclick="closePopup()" class="btn">Not Now</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="JS/index.js"></script>
+
+
+
+</body>
+</html>
+
